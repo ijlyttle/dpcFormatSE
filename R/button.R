@@ -45,10 +45,10 @@ button_page_external <- function(url, label = "") {
 button_modal <- function(id, idModal, class = "btn", icon = NULL, label = ""){
   
   tags$div(
-    align = "cneter",
+    align = "center",
     tags$button(
       id = id,
-      `data=toggle` = "modal",
+      `data-toggle` = "modal",
       `data-target` = paste0("#", idModal),
       class = class,
       list(icon, label)
