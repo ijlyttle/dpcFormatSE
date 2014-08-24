@@ -1,0 +1,9 @@
+Package: formatSE
+Type: Package
+Title: helps to format rmarkdown-based course
+Version: 0.99 
+Date: 2014-08-24
+Author: Ian Lyttle <ian.lyttle@schneider-electric.com>
+Maintainer: Ian Lyttle <ian.lyttle@schneider-electric.com>
+Description: Has everything to to with formatting for the mooc_dpc course
+License: Confidential and Proprietary to Schneider Electric
