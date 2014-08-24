@@ -11,7 +11,7 @@ button_page_external(url, label = "")
 \item{label}{character, html for the button}
 }
 \value{
-html fragment describing the button and the action
+html fragment describing a div with a centered button
 }
 \description{
 generate html for a button to launch
