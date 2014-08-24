@@ -25,7 +25,6 @@ well_html <- function(title = "", body_html = ""){
   
 }
 
-
 #' well_markdown
 #'
 #' Creates a well panel with a centered title an html body,
