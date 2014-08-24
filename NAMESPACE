@@ -3,4 +3,4 @@
 export(well_html)
 export(well_markdown)
 import(htmltools)
-import(rmarkdown)
+import(markdown)

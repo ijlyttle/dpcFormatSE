@@ -6,9 +6,9 @@
 well_markdown(title = "", body_markdown = "")
 }
 \arguments{
-\item{title}{}
+\item{title}{character, title for panel}
 
-\item{body_markdown}{}
+\item{body_markdown}{character, markdown for body}
 }
 \value{
 html fragment describing a bootstrap well-panel

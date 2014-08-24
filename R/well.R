@@ -31,8 +31,8 @@ well_html <- function(title = "", body_html = ""){
 #' Creates a well panel with a centered title an html body,
 #' generated using markdown
 #'
-#' @param title
-#' @param body_markdown
+#' @param title          character, title for panel
+#' @param body_markdown  character, markdown for body
 #'
 #' @return html fragment describing a bootstrap well-panel
 #' 
@@ -43,7 +43,7 @@ well_html <- function(title = "", body_html = ""){
 well_markdown <- function(title = "", body_markdown = ""){
   
   body_html <- 
-    text_markdown %>% 
+    body_markdown %>% 
     markdownToHTML(text = ., fragment.only = TRUE) %>% 
     HTML()
   
