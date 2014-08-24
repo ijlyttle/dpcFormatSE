@@ -2,6 +2,7 @@
 
 export(button_modal)
 export(button_page_external)
+export(md_html_fragment)
 export(well_html)
 export(well_markdown)
 import(htmltools)
