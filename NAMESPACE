@@ -2,6 +2,7 @@
 
 export(button_modal)
 export(button_page_external)
+export(embed_vimeo)
 export(md2html_fragment)
 export(well_html)
 export(well_markdown)
