@@ -1,0 +1,34 @@
+@import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");
+
+div.container-fluid {
+  max-width: 920px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #1ab6ea;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.row-fluid {
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+div.partition-title {
+  text-align: center;
+  margin: 0px;
+}
+
+/* make font lighter - IJL */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+body{
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
