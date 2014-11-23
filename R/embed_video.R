@@ -1,5 +1,3 @@
-library(htmltools)
-
 #' embed_vimeo
 #'
 #' creates a centered div for embedding a vimeo
@@ -8,7 +6,6 @@ library(htmltools)
 #' 
 #' @return html code describing div
 #' 
-#' @import htmltools
 #' @export
 #' 
 embed_vimeo <- function(vimeo_id){
@@ -16,9 +13,9 @@ embed_vimeo <- function(vimeo_id){
   url_vimeo <- 
     paste0("https://player.vimeo.com/video/", vimeo_id)  
 
-  tags$div(
+  htmltools::tags$div(
     align = "center",
-    tags$iframe(
+    htmltools::tags$iframe(
       src = url_vimeo,
       width = "500",
       height = "281",
