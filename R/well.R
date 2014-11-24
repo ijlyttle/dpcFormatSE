@@ -1,6 +1,3 @@
-library(htmltools)
-library(markdown)
-
 #' well_html
 #'
 #' Creates a well panel with a centered title an html body
@@ -10,15 +7,14 @@ library(markdown)
 #'
 #' @return html fragment describing a bootstrap well-panel 
 #' 
-#' @import htmltools
 #' @export
 #' 
 well_html <- function(title = "", body_html = ""){
   
-  tags$div(
+  htmltools::tags$div(
     class = "well well-se_special",
     list(
-      tags$p(align = "center", title),
+      htmltools::tags$p(align = "center", title),
       body_html
     )
   )
@@ -35,16 +31,15 @@ well_html <- function(title = "", body_html = ""){
 #'
 #' @return html fragment describing a bootstrap well-panel
 #' 
-#' @import markdown
-#' @import htmltools
+#' @importFrom magrittr %>%
 #' @export
 #' 
 well_markdown <- function(title = "", body_markdown = ""){
   
   body_html <- 
     body_markdown %>% 
-    markdownToHTML(text = ., fragment.only = TRUE) %>% 
-    HTML()
+    markdown::markdownToHTML(text = ., fragment.only = TRUE) %>% 
+    htmltools::HTML()
   
   well_html(title, body_html)
 }

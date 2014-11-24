@@ -12,7 +12,8 @@ Depends:
 Imports:
     shinyBS,
     htmltools,
-    markdown
+    markdown,
+    magrittr
 Suggests:
     testthat (>= 0.8.1),
     knitr (>= 1.6),
