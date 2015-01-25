@@ -1,5 +1,3 @@
-library(htmltools)
-
 #' button_page_external
 #'
 #' generate html for a button to launch 
@@ -10,15 +8,14 @@ library(htmltools)
 #'
 #' @return html fragment describing a div with a centered button
 #' 
-#' @import htmltools
 #' @export
 #' 
 #'
 button_page_external <- function(url, label = "") {
   
-  tags$div(
+  htmltools::tags$div(
     align = "center",
-    tags$a(
+    htmltools::tags$a(
       class = "btn",
       href = url,
       target = "_blank",
@@ -39,14 +36,13 @@ button_page_external <- function(url, label = "") {
 #' 
 #' @return character html fragment
 #' 
-#' @import htmltools
 #' @export
 #'
 button_modal <- function(id, idModal, class = "btn", icon = NULL, label = ""){
   
-  tags$div(
+  htmltools::tags$div(
     align = "center",
-    tags$button(
+    htmltools::tags$button(
       id = id,
       `data-toggle` = "modal",
       `data-target` = paste0("#", idModal),
