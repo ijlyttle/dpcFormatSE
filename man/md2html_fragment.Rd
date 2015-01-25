@@ -12,6 +12,6 @@ md2html_fragment(text_markdown)
 character, html fragment
 }
 \description{
-md2html_fragment
+create an html fragment using markdown text
 }
 

@@ -1,4 +1,17 @@
-
+#' bs_modal
+#' 
+#' create html for bootstrap modal - based on ebailey78/shinyBS bsModal
+#' 
+#' @param id
+#' @param title
+#' @param trigger
+#' @param ...
+#' @param href
+#' 
+#' @return character, html fragment
+#' 
+#' @export
+#' 
 bs_modal <- function(id, title, trigger, ..., href) {
   
   mo <- htmltools::tags$div(
