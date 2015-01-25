@@ -1,7 +1,6 @@
-library(htmltools)
-library(markdown)
-
 #' md2html_fragment
+#' 
+#' create an html fragment using markdown text
 #' 
 #' @param text_markdown
 #' 
