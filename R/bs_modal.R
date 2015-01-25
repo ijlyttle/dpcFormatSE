@@ -1,5 +1,5 @@
 
-bsModal <- function(id, title, trigger, ..., href) {
+bs_modal <- function(id, title, trigger, ..., href) {
   
   mo <- htmltools::tags$div(
     class = "modal sbs-modal hide fade", 
