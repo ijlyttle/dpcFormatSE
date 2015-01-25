@@ -7,13 +7,12 @@ library(markdown)
 #' 
 #' @return character, html fragment
 #' 
-#' @import htmltools
-#' @import markdown
 #' @export
 #' 
 md2html_fragment <- function(text_markdown){
   
-  text_markdown %>% 
-    markdownToHTML(text = ., fragment.only = TRUE) %>% 
-    HTML()  
+  htmltools::HTML(
+    markdown::markdownToHTML(text_markdown, fragment.only = TRUE)
+  ) 
+     
 }
