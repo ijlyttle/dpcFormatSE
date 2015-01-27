@@ -11,7 +11,7 @@
 md2html_fragment <- function(text_markdown){
   
   htmltools::HTML(
-    markdown::markdownToHTML(text_markdown, fragment.only = TRUE)
+    markdown::markdownToHTML(text = text_markdown, fragment.only = TRUE)
   ) 
      
 }
