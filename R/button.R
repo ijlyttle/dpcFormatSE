@@ -10,13 +10,13 @@
 #' 
 #' @export
 #' 
-#'
 button_page_external <- function(url, label = "") {
   
   htmltools::tags$div(
     align = "center",
     htmltools::tags$a(
-      class = "btn",
+      role = "button",
+      class = "btn btn-primary",
       href = url,
       target = "_blank",
       label
@@ -38,15 +38,15 @@ button_page_external <- function(url, label = "") {
 #' 
 #' @export
 #'
-button_modal <- function(id, idModal, class = "btn", icon = NULL, label = ""){
+button_modal <- function(id, idModal, class = "btn btn-info", icon = NULL, label = ""){
   
   htmltools::tags$div(
     align = "center",
-    htmltools::tags$button(
-      id = id,
+    htmltools::tags$a(
+      `href` = "#",
+      `class` = class,
       `data-toggle` = "modal",
       `data-target` = paste0("#", idModal),
-      class = class,
       list(icon, label)
     )
   )
