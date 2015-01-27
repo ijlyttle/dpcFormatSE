@@ -26,28 +26,3 @@ button_page_external <- function(url, label = "") {
 }
 
 
-#' button_modal
-#'
-#' @param id
-#' @param idModal
-#' @param class
-#' @param icon
-#' @param label
-#' 
-#' @return character html fragment
-#' 
-#' @export
-#'
-button_modal <- function(id, idModal, class = "btn btn-info", icon = NULL, label = ""){
-  
-  htmltools::tags$div(
-    align = "center",
-    htmltools::tags$a(
-      `href` = "#",
-      `class` = class,
-      `data-toggle` = "modal",
-      `data-target` = paste0("#", idModal),
-      list(icon, label)
-    )
-  )
-}
