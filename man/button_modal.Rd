@@ -3,18 +3,18 @@
 \alias{button_modal}
 \title{button_modal}
 \usage{
-button_modal(id, idModal, class = "btn", icon = NULL, label = "")
+button_modal(id, idModal, icon = NULL, label = "")
 }
 \arguments{
 \item{id}{}
 
 \item{idModal}{}
 
-\item{class}{}
-
 \item{icon}{}
 
 \item{label}{}
+
+\item{class}{}
 }
 \value{
 character html fragment

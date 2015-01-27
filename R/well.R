@@ -31,15 +31,11 @@ well_html <- function(title = "", body_html = ""){
 #'
 #' @return html fragment describing a bootstrap well-panel
 #' 
-#' @importFrom magrittr %>%
 #' @export
 #' 
 well_markdown <- function(title = "", body_markdown = ""){
   
-  body_html <- 
-    body_markdown %>% 
-    markdown::markdownToHTML(text = ., fragment.only = TRUE) %>% 
-    htmltools::HTML()
+  body_html <- md2html_fragment(body_markdown)
   
   well_html(title, body_html)
 }
