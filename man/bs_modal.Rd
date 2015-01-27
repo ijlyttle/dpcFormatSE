@@ -3,7 +3,7 @@
 \alias{bs_modal}
 \title{bs_modal}
 \usage{
-bs_modal(id, title, trigger, ..., href)
+bs_modal(id, title, trigger, ...)
 }
 \arguments{
 \item{id}{}
@@ -13,8 +13,6 @@ bs_modal(id, title, trigger, ..., href)
 \item{trigger}{}
 
 \item{...}{}
-
-\item{href}{}
 }
 \value{
 character, html fragment
