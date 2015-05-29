@@ -1,0 +1,65 @@
+/*
+
+spruce_green        #009530
+sky_blue            #42b4e6
+honeysuckle_orange  #e47f00
+fuschia_red         #b10043
+seedling_green      #87d300
+sunflower_yellow    #ffd100
+lady_fern_green     #4fa600
+
+*/
+
+/* format embedding shiny app */
+iframe.shiny-frame {
+  border: 2px solid #42b4e6;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;  
+}
+
+.navbar{
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dropdown-header {
+  color: #4fa600;
+}
+
+.dropdown-menu > li > a {
+  color: #626469;
+}
+
+/* padding for bootstrap navbar */
+body {
+  padding-top: 50px; /* changed from 50/40 */
+  padding-bottom: 40px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+/* stop runaway ggvis containters - IJL */
+.ggvis-output-container{
+  max-width: 940px;
+}
+
+
+/* offset scroll position for anchor links (for fixed navbar)  */
+@media (min-width: 980px) {
+  .section h2 {
+    padding-top: 52px;
+    margin-top: -52px;
+  }
+  .section h3 {
+    padding-top: 52px;
+    margin-top: -52px;
+  }
+}
+
+
+

@@ -1,4 +1,16 @@
-@import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");
+/*
+
+spruce_green        #009530
+sky_blue            #42b4e6
+honeysuckle_orange  #e47f00
+fuschia_red         #b10043
+seedling_green      #87d300
+sunflower_yellow    #ffd100
+lady_fern_green     #4fa600
+
+*/
+
+@import url("//fonts.googleapis.com/css?family=Varela+Round");
 
 body{
   margin-top: 10px;
@@ -9,8 +21,6 @@ div.container-fluid {
   //margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid #1ab6ea;
-  border-radius: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -28,11 +38,33 @@ div.partition-title {
 }
 
 /* make font lighter - IJL */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+h1, h2, h3, h4, h5, h6, .navbar {
+  font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
-body{
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* Trick used to get modal-backdrop to work properly */
+.modal-backdrop {
+  z-index: -1;
 }
+
+th, td {
+  padding: 7.5px;
+}
+
+
+/* format embedding video */
+div.video_embed {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* format well-se_special div */
+div.well-se_special {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
