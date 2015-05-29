@@ -6,7 +6,7 @@
     fuschia_red = "#b10043",
     lady_fern_green = "#4fa600",
     sunflower_yellow = "#ffd100",
-    seedling_green = "87d300"
+    seedling_green = "#87d300"
   )
 
 
