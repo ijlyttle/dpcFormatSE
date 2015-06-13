@@ -1,6 +1,8 @@
 #' bootstrap_se
 #'
-#' @param ...
+#' function to use to make a custom rendering of Rmd files
+#'
+#' @param ... args to pass through
 #' 
 #' @return character html fragment
 #' 

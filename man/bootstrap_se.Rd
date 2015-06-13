@@ -7,12 +7,12 @@
 bootstrap_se(...)
 }
 \arguments{
-\item{...}{}
+\item{...}{args to pass through}
 }
 \value{
 character html fragment
 }
 \description{
-bootstrap_se
+function to use to make a custom rendering of Rmd files
 }
 
