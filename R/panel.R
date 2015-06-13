@@ -98,6 +98,7 @@ panel_html_exercise <- function(title = "", body_html = "", class = "panel panel
 #' @param title_modal     character, title to display for modal ("Answer")
 #' 
 #' @return html for panel and modal
+#' @export
 #' 
 panel_exercise <- 
   function(content_panel = "", title_panel = "Exercise",
