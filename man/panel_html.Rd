@@ -4,12 +4,12 @@
 \alias{panel_html}
 \title{panel_html}
 \usage{
-panel_html(title = "", body_html = "", class = "panel panel-default")
+panel_html(body_html = "", title = "", class = "panel panel-default")
 }
 \arguments{
-\item{title}{character, title for panel}
-
 \item{body_html}{character, html for body}
+
+\item{title}{character, title for panel}
 
 \item{class}{character, name of bootstrap panel class}
 }
