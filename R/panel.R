@@ -107,7 +107,7 @@ panel_exercise <-
     # assemble some html, using whiskers {{}} for placeholders
     html_raw <- 
       tags$html(
-        markdown::markdownToHTML(text = content_modal, fragment.only = TRUE),
+        markdown::markdownToHTML(text = "content_panel", fragment.only = TRUE),
         tags$div(
           align = "center",
           actionButton("{{id}}_btn", label = title_modal, class = "btn btn-info") 
@@ -117,7 +117,7 @@ panel_exercise <-
           title = title_modal,
           trigger = "{{id}}_btn",
           size = "medium",
-          markdown::markdownToHTML(text = content_modal, fragment.only = TRUE)
+          markdown::markdownToHTML(text = "content_modal", fragment.only = TRUE)
         ),
         # some javascript to tell the panel to reload when it is hidden
         # the effect of this is to stop videos from playing when the 
