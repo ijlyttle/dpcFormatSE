@@ -10,6 +10,10 @@ lady_fern_green     #4fa600
 
 */
 
+body{
+  margin-top: 10px;
+}
+
 div.container-fluid {
   border: 2px solid #42b4e6;
   border-radius: 10px;

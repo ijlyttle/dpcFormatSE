@@ -4,10 +4,10 @@
 \alias{panel_html}
 \title{panel_html}
 \usage{
-panel_html(body_html = "", title = "", class = "panel panel-default")
+panel_html(div_content, title = "", class = "panel panel-default")
 }
 \arguments{
-\item{body_html}{character, html for body}
+\item{div_content}{div, html for body}
 
 \item{title}{character, title for panel}
 

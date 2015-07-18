@@ -2,8 +2,11 @@
 
 export(bootstrap_se)
 export(bs_modal)
+export(button_external)
+export(button_external_app)
+export(button_external_page)
 export(button_modal)
-export(button_page_external)
+export(div_modal)
 export(embed_vimeo)
 export(ggsave_black)
 export(img_caption)

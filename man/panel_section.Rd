@@ -4,12 +4,12 @@
 \alias{panel_section}
 \title{panel_section}
 \usage{
-panel_section(content_panel = "", title_panel = "")
+panel_section(div_content = "", title = "")
 }
 \arguments{
-\item{content_panel}{character, markdown or html to use as content for panel ("")}
+\item{div_content}{character, markdown or html to use as content for panel ("")}
 
-\item{title_panel}{character, title to display for panel ("")}
+\item{title}{character, title to display for panel ("")}
 }
 \value{
 html for panel

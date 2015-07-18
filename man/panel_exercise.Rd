@@ -4,17 +4,17 @@
 \alias{panel_exercise}
 \title{panel_exercise}
 \usage{
-panel_exercise(content_panel = "", title_panel = "Exercise", id_modal,
-  content_modal = "", title_modal = "Answer")
+panel_exercise(div_content_panel = "", title_panel = "Exercise", id_modal,
+  div_content_modal = "", title_modal = "Answer")
 }
 \arguments{
-\item{content_panel}{character, markdown or html to use as content for panel ("")}
+\item{div_content_panel}{character, markdown or html to use as content for panel ("")}
 
 \item{title_panel}{character, title to display for panel ("Exercise")}
 
 \item{id_modal}{character, unique within page, to identify the modal panel}
 
-\item{content_modal}{character, markdown or html to use as content for modal ("")}
+\item{div_content_modal}{character, markdown or html to use as content for modal ("")}
 
 \item{title_modal}{character, title to display for modal ("Answer")}
 }

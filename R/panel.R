@@ -2,15 +2,15 @@
 #'
 #' Creates a panel 
 #'
-#' @param body_html  character, html for body
-#' @param title      character, title for panel
-#' @param class      character, name of bootstrap panel class
+#' @param div_content  div, html for body
+#' @param title        character, title for panel
+#' @param class        character, name of bootstrap panel class
 #'
 #' @return html fragment describing a bootstrap panel 
 #' 
 #' @export
 #' 
-panel_html <- function(body_html = "", title = "", class = "panel panel-default"){
+panel_html <- function(div_content, title = "", class = "panel panel-default"){
   
   htmltools::tags$div(
     `class` = class,
@@ -21,9 +21,9 @@ panel_html <- function(body_html = "", title = "", class = "panel panel-default"
         title
       )
     ),
-    htmltools::div(
+    htmltools::tags$div(
       `class` = "panel-body",
-      body_html
+      div_content
     )
   )
   
@@ -105,31 +105,67 @@ js_reload_modal <- function(id){
   script_interp 
 }
 
+
+#' div_modal
+#' 
+#' creates a button and modal window
+#'  
+#' @param id        character, unique within page, to identify the modal panel 
+#' @param div_content   character, markdown or html to use as content for modal ("")
+#' @param title     character, title to display for modal ("")
+#' 
+#' @return html div
+#' @export
+#' 
+div_modal <- function(id, div_content = "", title = "", size = "medium"){
+
+  id_btn <- whisker::whisker.render("{{id}}_btn", list(id = id))
+  id_modal <- whisker::whisker.render("{{id}}_modal", list(id = id))
+  
+  # script to stop video when modal closed
+  script_modal <- js_reload_modal(id)
+  
+    htmltools::tags$div(
+      align = "center",
+      shiny::actionButton(id_btn, label = title, class = "btn btn-primary"),
+      shinyBS::bsModal(
+        id = id_modal, 
+        title = title,
+        trigger = id_btn,
+        size = size,
+        div_content,
+        htmltools::tags$script(script_modal)
+      )      
+    )
+}
+
+html_fragment <- function(x){
+  
+  # if this is not a shiny tag, convert to html & wrap in div
+  if (!identical(class(x), "shiny.tag")){
+    x <- tags$div(md2html_fragment(x))
+  }
+  
+  x 
+}
+
 #' panel_section
 #' 
 #' builds an html panel, with a possibility for modal/modal botton at bottom 
 #' 
 #' At the bottom of the panel, there will be a button to activate a modal.
 #' 
-#' @param content_panel   character, markdown or html to use as content for panel ("")
-#' @param title_panel     character, title to display for panel ("")
+#' @param div_content   character, markdown or html to use as content for panel ("")
+#' @param title         character, title to display for panel ("")
 #' 
 #' @return html for panel 
 #' @export
 #' 
 panel_section <- 
-  function(content_panel = "", title_panel = ""){
+  function(div_content = "", title = ""){
 
-  # convert content to HTML
-  html_panel <- 
-    htmltools::HTML(
-      markdown::markdownToHTML(text = as.character(content_panel), fragment.only = TRUE)
-    )   
-  
-  html_content <- htmltools::tags$div(html_panel)
-  
   # build the panel
-  dpcFormatSE::panel_html(html_content, title = title_panel, class = "panel panel-primary")  
+  dpcFormatSE::panel_html(div_content, title = title, class = "panel panel-primary")  
         
 }
 
@@ -139,55 +175,27 @@ panel_section <-
 #' 
 #' At the bottom of the panel, there will be a button to activate a modal.
 #' 
-#' @param content_panel   character, markdown or html to use as content for panel ("")
+#' @param div_content_panel   character, markdown or html to use as content for panel ("")
 #' @param title_panel     character, title to display for panel ("Exercise")
 #' @param id_modal        character, unique within page, to identify the modal panel 
-#' @param content_modal   character, markdown or html to use as content for modal ("")
+#' @param div_content_modal   character, markdown or html to use as content for modal ("")
 #' @param title_modal     character, title to display for modal ("Answer")
 #' 
 #' @return html for panel and modal
 #' @export
 #' 
 panel_exercise <- 
-  function(content_panel = "", title_panel = "Exercise",
-           id_modal, content_modal = "", title_modal = "Answer"){
+  function(div_content_panel = "", title_panel = "Exercise",
+           id_modal, div_content_modal = "", title_modal = "Answer"){
 
-    # convert content to HTML
-    html_panel <- 
-      htmltools::HTML(
-        markdown::markdownToHTML(text = as.character(content_panel), fragment.only = TRUE)
-      )
-    
-    html_modal <- 
-      htmltools::HTML(
-        markdown::markdownToHTML(text = as.character(content_modal), fragment.only = TRUE)
-      )
-
-    id_btn <- whisker::whisker.render("{{id}}_btn", list(id = id_modal))
-    id_modal_local <- whisker::whisker.render("{{id}}_modal", list(id = id_modal))
-    
-    # script to stop video when modal closed
-    script_modal <- js_reload_modal(id_modal)
-        
-    html_content <- 
+    div_content <- 
       htmltools::tags$div(
-        html_panel,
-        htmltools::tags$div(
-          align = "center",
-          shiny::actionButton(id_btn, label = title_modal, class = "btn btn-info") 
-        ),
-        shinyBS::bsModal(
-          id = id_modal_local, 
-          title = title_modal,
-          trigger = id_btn,
-          size = "medium",
-          html_modal
-        ),
-        htmltools::tags$script(script_modal)
-      )
+        div_content_panel,
+        div_modal(id= id_modal, div_content = div_content_modal, title = title_modal)
+      )  
 
     # build the panel
-    dpcFormatSE::panel_html(html_content, title = title_panel, class = "panel panel-info")
+    panel_html(div_content, title = title_panel, class = "panel panel-info")
     
   }
 
