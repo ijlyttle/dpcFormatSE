@@ -19,3 +19,18 @@ bootstrap_se <- function(...) {
   # call the base html_document function, imposing our css
   rmarkdown::html_document(css = css, ...)
 }
+
+
+#' @export
+div_se_logo_white <- function(){
+  file_name <- system.file("img", "Logo_SE_White-Screen.png", package = "dpcFormatSE")
+  str_image <- knitr::image_uri(file_name)
+  
+  htmltools::div(
+    id = "se_logo_white",
+    htmltools::img(
+      width = "100",
+      src = str_image
+    )
+  )
+}
