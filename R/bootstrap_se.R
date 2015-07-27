@@ -28,9 +28,32 @@ div_se_logo_white <- function(){
   
   htmltools::div(
     id = "se_logo_white",
+    class = "pull-left",
     htmltools::img(
-      width = "100",
+      height = "32",
+      style = "padding-right: 32px;",
       src = str_image
     )
   )
+}
+
+#' @export
+se_title <- function(title = ""){
+  
+  file_name <- system.file("img", "Logo_SE_White-Screen.png", package = "dpcFormatSE")
+  str_image <- knitr::image_uri(file_name)
+  
+  list(
+    htmltools::div(
+      id = "se_logo_white",
+      class = "pull-left",
+      htmltools::img(
+        height = "32",
+        style = "padding-right: 32px;",
+        src = str_image
+      )
+    ),
+    htmltools::div(title, class = "pull-right", style = "padding-top: 7px;")    
+  )
+
 }

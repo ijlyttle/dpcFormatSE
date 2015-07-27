@@ -14,9 +14,8 @@ lady_fern_green     #4fa600
 
 
 
-div.container-fluid {
+container-fluid {
   max-width: 920px;
-  //margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 5px;
@@ -32,13 +31,17 @@ div.row-fluid {
 
 div.partition-title {
   text-align: center;
-  margin: 0px;
+  margin: 0;
 }
 
 /* make font lighter - IJL */
 h1, h2, h3, h4, h5, h6, .navbar {
   font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+}
+
+/* make font lighter - IJL */
+.navbar {
+  text-transform: uppercase;
 }
 
 /* Trick used to get modal-backdrop to work properly */
@@ -52,17 +55,23 @@ th, td {
 
 
 /* format embedding video */
-div.video_embed {
+.video_embed {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
 }
 
+
+/* may not be needed in future */
 /* format well-se_special div */
-div.well-se_special {
+.well-se_special {
   margin-left: 20px;
   margin-right: 20px;
 }
 
+.navbar-brand {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
 
 
