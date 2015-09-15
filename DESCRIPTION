@@ -1,6 +1,6 @@
-Package: dpcFormatSE
+Package: formatSE
 Type: Package
-Title: helps to format rmarkdown-based course
+Title: formatting for SE rmarkdown and shiny
 Version: 0.99
 Date: 2014-08-24
 Author: Ian Lyttle <ian.lyttle@schneider-electric.com>

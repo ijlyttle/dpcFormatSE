@@ -1,4 +1,4 @@
-# dpcFormatSE 0.1.99
+# formatSE
 
-Removes dependency on shinyBS
+changing name to formatSE
 
