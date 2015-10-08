@@ -11,9 +11,9 @@
 bootstrap_se <- function(...) {
   
   css <- c(
-      system.file(file.path("css", "bootstrap_se.css"), package = "dpcFormatSE"),
-      system.file(file.path("css", "style_local.css"), package = "dpcFormatSE"),
-      system.file(file.path("css", "style_local_web.css"), package = "dpcFormatSE")
+      system.file(file.path("css", "bootstrap_se.css"), package = "formatSE"),
+      system.file(file.path("css", "style_local.css"), package = "formatSE"),
+      system.file(file.path("css", "style_local_web.css"), package = "formatSE")
   )
   
   # call the base html_document function, imposing our css
@@ -23,7 +23,7 @@ bootstrap_se <- function(...) {
 
 #' @export
 div_se_logo_white <- function(){
-  file_name <- system.file("img", "Logo_SE_White-Screen.png", package = "dpcFormatSE")
+  file_name <- system.file("img", "Logo_SE_White-Screen.png", package = "formatSE")
   str_image <- knitr::image_uri(file_name)
   
   htmltools::div(
@@ -40,7 +40,7 @@ div_se_logo_white <- function(){
 #' @export
 se_title <- function(title = ""){
   
-  file_name <- system.file("img", "Logo_SE_White-Screen.png", package = "dpcFormatSE")
+  file_name <- system.file("img", "Logo_SE_White-Screen.png", package = "formatSE")
   str_image <- knitr::image_uri(file_name)
   
   list(

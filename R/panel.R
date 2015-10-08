@@ -44,9 +44,9 @@ panel_html <- function(div_content, title = "", class = "panel panel-default"){
 #' 
 panel_markdown <- function(title = "", body_markdown = "", class = "panel panel-default"){
   
-  body_html <- dpcFormatSE::md2html_fragment(body_markdown)
+  body_html <- formatSE::md2html_fragment(body_markdown)
   
-  dpcFormatSE::panel_html(body_html, title, class)
+  formatSE::panel_html(body_html, title, class)
 }
 
 #' panel_markdown_section
@@ -64,7 +64,7 @@ panel_markdown_section <- function(title = "", body_markdown = ""){
   
   body_html <- md2html_fragment(body_markdown)
   
-  dpcFormatSE::panel_html(body_html, title,  class = "panel panel-primary")
+  formatSE::panel_html(body_html, title,  class = "panel panel-primary")
 }
 
 
@@ -83,7 +83,7 @@ panel_markdown_section <- function(title = "", body_markdown = ""){
 #' 
 panel_html_exercise <- function(title = "", body_html = "", class = "panel panel-info"){
   
-  dpcFormatSE::panel_html(body_html, title, class)
+  formatSE::panel_html(body_html, title, class)
 
 }
 
@@ -165,7 +165,7 @@ panel_section <-
   function(div_content = "", title = ""){
 
   # build the panel
-  dpcFormatSE::panel_html(div_content, title = title, class = "panel panel-primary")  
+  formatSE::panel_html(div_content, title = title, class = "panel panel-primary")  
         
 }
 
