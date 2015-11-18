@@ -7,7 +7,7 @@
 #' @return character, html fragment
 #' 
 #' @export
-#' 
+# 
 md2html_fragment <- function(text_markdown){
   
   htmltools::HTML(

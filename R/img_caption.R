@@ -8,7 +8,7 @@
 #' @return string html-code sepcifying table
 #' 
 #' @export
-#' 
+# 
 img_caption <- function(src, caption = ""){
     
   htmltools::tags$table(

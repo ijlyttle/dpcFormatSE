@@ -34,7 +34,7 @@ panel_bs <- function(type = "primary", title = NULL, content = NULL){
 #'
 #' @return shiny \code{fluidRow}
 #' @export
-#'
+#
 collapse_panel_set <- function(..., widths = c(3, 9)){
   
   list_panel <- list(...)
@@ -55,36 +55,44 @@ collapse_panel_set <- function(..., widths = c(3, 9)){
   )
   
   # loop over list_panel to build control and target
+  is_init <- TRUE
   for (i in seq_along(list_panel)){
     
-    is_init <- (i == 1)
-    panel <- list_panel[[i]]
-    
-    id_panel <- paste(id_panel_set, "panel", shiny:::createUniqueId(4), sep = "-")
-    id_control_content <- paste(id_panel, "control", sep = "-")
-    class_follower <- paste(id_control_content, "follower", sep = "-")
-    
-    control <-
-      htmltools::tagAppendChild(
-        control,
-        collapse_panel_control(
-          title = panel$title,
-          init = is_init,
-          id_parent = id_control_parent,
-          id_content = id_control_content,
-          content = panel$control
+    if (!is.null(list_panel[[i]])){
+      
+      panel <- list_panel[[i]]
+        
+      id_panel <- paste(id_panel_set, "panel", shiny:::createUniqueId(4), sep = "-")
+      id_control_content <- paste(id_panel, "control", sep = "-")
+      class_follower <- paste(id_control_content, "follower", sep = "-")
+      
+      control <-
+        htmltools::tagAppendChild(
+          control,
+          collapse_panel_control(
+            title = panel$title,
+            init = is_init,
+            id_parent = id_control_parent,
+            id_content = id_control_content,
+            content = panel$control
+          )
         )
-      )
-    
-    display <-
-      htmltools::tagAppendChild(
-        display,
-        collapse_panel_display(
-          init = is_init,
-          class_follower = class_follower,
-          content = panel$display
+      
+      display <-
+        htmltools::tagAppendChild(
+          display,
+          collapse_panel_display(
+            init = is_init,
+            class_follower = class_follower,
+            content = panel$display
+          )
         )
-      )
+      
+      is_init <- FALSE 
+      
+    }
+    
+
   }
   
   # return fluidRow
@@ -105,7 +113,7 @@ collapse_panel_set <- function(..., widths = c(3, 9)){
 #'
 #' @return list to be used by \code{collapse_panel_set}
 #' @export
-#' 
+# 
 collapse_panel <- function(
   title = "",
   control = htmltools::tagList(),

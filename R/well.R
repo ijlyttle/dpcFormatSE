@@ -8,7 +8,7 @@
 #' @return html fragment describing a bootstrap well-panel 
 #' 
 #' @export
-#' 
+# 
 well_html <- function(title = "", body_html = ""){
   
   htmltools::tags$div(
@@ -32,7 +32,7 @@ well_html <- function(title = "", body_html = ""){
 #' @return html fragment describing a bootstrap well-panel
 #' 
 #' @export
-#' 
+# 
 well_markdown <- function(title = "", body_markdown = ""){
   
   body_html <- md2html_fragment(body_markdown)

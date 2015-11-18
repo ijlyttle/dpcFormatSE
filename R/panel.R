@@ -9,7 +9,7 @@
 #' @return html fragment describing a bootstrap panel 
 #' 
 #' @export
-#' 
+# 
 panel_html <- function(div_content, title = "", class = "panel panel-default"){
   
   htmltools::tags$div(
@@ -41,7 +41,7 @@ panel_html <- function(div_content, title = "", class = "panel panel-default"){
 #' @return html fragment describing a bootstrap panel
 #' 
 #' @export
-#' 
+# 
 panel_markdown <- function(title = "", body_markdown = "", class = "panel panel-default"){
   
   body_html <- formatSE::md2html_fragment(body_markdown)
@@ -59,7 +59,7 @@ panel_markdown <- function(title = "", body_markdown = "", class = "panel panel-
 #' @return html fragment describing a bootstrap panel
 #' 
 #' @export
-#' 
+# 
 panel_markdown_section <- function(title = "", body_markdown = ""){
   
   body_html <- md2html_fragment(body_markdown)
@@ -80,7 +80,7 @@ panel_markdown_section <- function(title = "", body_markdown = ""){
 #' @return html fragment describing a bootstrap panel
 #' 
 #' @export
-#' 
+# 
 panel_html_exercise <- function(title = "", body_html = "", class = "panel panel-info"){
   
   formatSE::panel_html(body_html, title, class)
@@ -116,7 +116,7 @@ js_reload_modal <- function(id){
 #' 
 #' @return html div
 #' @export
-#' 
+# 
 div_modal <- function(id, div_content = "", title = "", size = "medium"){
 
   id_btn <- whisker::whisker.render("{{id}}_btn", list(id = id))
@@ -160,7 +160,7 @@ html_fragment <- function(x){
 #' 
 #' @return html for panel 
 #' @export
-#' 
+# 
 panel_section <- 
   function(div_content = "", title = ""){
 
@@ -183,7 +183,7 @@ panel_section <-
 #' 
 #' @return html for panel and modal
 #' @export
-#' 
+# 
 panel_exercise <- 
   function(div_content_panel = "", title_panel = "Exercise",
            id_modal, div_content_modal = "", title_modal = "Answer"){

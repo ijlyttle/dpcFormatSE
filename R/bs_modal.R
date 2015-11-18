@@ -1,15 +1,15 @@
 #' button_modal
 #'
-#' @param id
-#' @param idModal
-#' @param class
-#' @param icon
-#' @param label
+#' @param id blah
+#' @param idModal blah
+#' @param class blah
+#' @param icon blah
+#' @param label blah
 #' 
 #' @return character html fragment
 #' 
 #' @export
-#'
+#
 button_modal <- function(id, idModal, icon = NULL, label = ""){
   
   htmltools::tags$div(
@@ -28,15 +28,15 @@ button_modal <- function(id, idModal, icon = NULL, label = ""){
 #' 
 #' create html for bootstrap modal - based on ebailey78/shinyBS bsModal
 #' 
-#' @param id
-#' @param title
-#' @param trigger
+#' @param id blah
+#' @param title blah
+#' @param trigger blah
 #' @param ...
 #' 
 #' @return character, html fragment
 #' 
 #' @export
-#' 
+# 
 bs_modal <- function(id, title, trigger, ...) {
     
   # ref: http://getbootstrap.com/javascript/#modals

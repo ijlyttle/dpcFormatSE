@@ -7,7 +7,7 @@
 #' @return html code describing div
 #' 
 #' @export
-#' 
+# 
 embed_vimeo <- function(vimeo_id){
   
   url_vimeo <- 

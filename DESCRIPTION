@@ -22,3 +22,4 @@ Suggests:
 VignetteBuilder: knitr
 Roxygen: list(wrap = FALSE)
 LazyData: true
+RoxygenNote: 5.0.0

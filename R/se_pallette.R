@@ -19,7 +19,7 @@
 #' @return character vector
 #' 
 #' @export
-#' 
+# 
 se_palette <- function(name = NULL){
   
   if( is.null(name) ){

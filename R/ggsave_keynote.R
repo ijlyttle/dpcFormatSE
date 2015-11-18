@@ -2,13 +2,13 @@
 #'
 #' save ggplot using black-background theme
 #'
-#' @param file_name
-#' @param plot
+#' @param file_name blah
+#' @param plot blah
 #'
 #' @return NULL
 #' 
 #' @export
-#' 
+# 
 ggsave_black <- function(file_name, plot){
   
   theme_keynote <- 

@@ -10,7 +10,7 @@
 #' @return html fragment describing a div with a centered button
 #' 
 #' @export
-#' 
+# 
 button_external <- function(url, label = "", class = "btn btn-primary") {
   
   htmltools::tags$div(

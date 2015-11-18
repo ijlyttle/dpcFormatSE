@@ -7,7 +7,7 @@
 #' @return character html fragment
 #' 
 #' @export
-#'
+#
 bootstrap_se <- function(...) {
   
   css <- c(
