@@ -1,7 +1,3 @@
-/* get    
- *
- */
-
 // find the navbar_nav element
 var elem_navbar_nav = document.getElementsByClassName("navbar-nav")[0];
 
